@@ -1,0 +1,7 @@
+<section class="listing">
+    <img class="listing-photo" [src]="housingLocation.foto" alt="Foto de {{housingLocation.tipo}}">
+    <h2 class="listing-heading"> {{housingLocation.tipo}}</h2>
+    <p class="listing-location">{{housingLocation.ciudad}}, {{housingLocation.provincia}}</p>
+    <a [routerLink]="['/details', housingLocation._id]">Ver más</a>
+    <p class="listing-location">Identificador: {{housingLocation._id}}</p>
+  </section>

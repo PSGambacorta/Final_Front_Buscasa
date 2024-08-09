@@ -1,0 +1,31 @@
+<article>
+    <img class="listing-photo" [src]="housingLocation?.foto" alt="Imagen de Casa">
+    <section class="listing-description">
+      <h2 class="listing-heading">{{housingLocation?.tipo}}</h2> 
+      <p class="listing-location"> {{housingLocation?.ciudad}}, {{housingLocation?.provincia}}
+    </section>
+    <section class="listing-features">
+      <h2 class="section-heading">Caracteristicas</h2>
+      <ul>
+        <li>Tipo de Alquiler: {{housingLocation?.locacion}}</li>
+        <li>Cantidad de Ambientes: {{housingLocation?.ambientes}}</li>
+        <li>Identificador: {{housingLocation?._id}}</li>             
+</ul>
+    </section>
+    <section class="listing-apply">
+      <h2 class="section-heading">Te interesa?</h2>
+      <form [formGroup]="applyForm" (submit)="submitApplication()">  
+        
+        <label for="first-name">Nombre</label>
+        <input id="first-name" type="text" formControlName="firstName">
+        
+        <label for="last-name">Apellido</label>
+        <input id="last-name" type="text" formControlName="lastName">
+        
+        <label for="email">Email</label>
+        <input id="email" type="email" formControlName="email">
+
+      <button type="submit" class="primary">Enviar</button>
+      </form>
+    </section>
+      </article>
